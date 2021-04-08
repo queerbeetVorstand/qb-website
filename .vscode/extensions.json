@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker", 
+        "mikestead.dotenv", 
+        "dbaeumer.vscode-eslint", 
+        "wix.vscode-import-cost", 
+        "yzhang.markdown-all-in-one", 
+        "esbenp.prettier-vscode", 
+        "gruntfuggly.todo-tree", 
+        "redhat.vscode-yaml"
+    ]
+}

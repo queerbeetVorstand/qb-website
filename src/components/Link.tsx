@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import * as React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
@@ -9,6 +8,7 @@ type NextComposedProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'hr
   NextLinkProps;
 
 const NextComposed = React.forwardRef<HTMLAnchorElement, NextComposedProps>((props, ref) => {
+  // eslint-disable-next-line react/prop-types
   const { as, href, replace, scroll, passHref, shallow, prefetch, ...other } = props;
 
   return (
@@ -25,6 +25,8 @@ const NextComposed = React.forwardRef<HTMLAnchorElement, NextComposedProps>((pro
     </NextLink>
   );
 });
+
+NextComposed.displayName = "NextComposed"
 
 interface LinkPropsBase {
   activeClassName?: string;
@@ -67,6 +69,10 @@ function Link(props: LinkProps) {
   );
 }
 
-export default React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
+const LinkWrapper = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
   <Link {...props} innerRef={ref} />
 ));
+
+LinkWrapper.displayName = "Link"
+
+export default LinkWrapper;
