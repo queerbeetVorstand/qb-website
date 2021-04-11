@@ -4,9 +4,9 @@ services:
     container_name: database
     image: postgres:12
     volumes:
-      - ./data/database:/var/lib/postgresql/data
+      - ${PWD}/data/postgres:/var/lib/postgresql/data
     networks:
-      - directus
+      - nextus
     environment:
       POSTGRES_USER: 'directus'
       POSTGRES_PASSWORD: 'directus'
@@ -16,19 +16,20 @@ services:
     container_name: cache
     image: redis:6
     networks:
-      - directus
+      - nextus
 
   directus:
     container_name: directus
     image: directus/directus:v9.0.0-rc.24
-    ports:
-      - 8055:8055
     networks:
-      - directus
+      - nextus
     depends_on:
       - cache
       - database
     environment:
+      PUBLIC_URL: ${CMS_ROOT_PATH}
+      LOG_LEVEL: 'debug'
+
       KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
       SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
 
@@ -43,8 +44,40 @@ services:
       CACHE_STORE: 'redis'
       CACHE_REDIS: 'redis://cache:6379'
 
-      ADMIN_EMAIL: 'admin@example.com'
-      ADMIN_PASSWORD: 'd1r3ctu5'
+      ADMIN_EMAIL: ${CMS_ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${CMS_ADMIN_PASSWORD}
+
+  nextjs:
+    container_name: nextjs
+    build: ./nextjs
+    networks:
+      - nextus
+    depends_on:
+      - directus
+    volumes:
+      - '${PWD}:/nextjs'
+    environment:
+      DIRECTUS_ADDRESS: 'directus:8055${CMS_ROOT_PATH}'
+      NEXT_PUBLIC_DIRECTUS_ADDRESS: '${WEBSITE_HOST}${CMS_ROOT_PATH}'
+
+  nginx:
+    container_name: nginx
+    image: nginx
+    networks:
+      - nextus
+    depends_on:
+      - directus
+      - nextjs
+    volumes:
+      - ./nginx:/etc/nginx/templates
+      - ${PWD}/data/nginx/logs:/var/log/nginx
+    ports:
+      - '${DEV_PORT}:8080'
+    environment:
+      NGINX_HOST: ${WEBSITE_HOST}
+      NGINX_PORT: 8080
+      NEXTJS_PORT: 3000
+      DIRECTUS_PORT: 8055
 
 networks:
-  directus:
+  nextus:

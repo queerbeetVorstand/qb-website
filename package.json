@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "docker-compose -f app/docker-compose.yml up -d",
+    "dockerized_dev": "next",
+    "build": "next build"
   },
   "dependencies": {
     "@directus/sdk": "^9.0.0-rc.56",
@@ -13,7 +13,8 @@
     "clsx": "1",
     "next": "10",
     "react": "17",
-    "react-dom": "17"
+    "react-dom": "17",
+    "swr": "^0.5.5"
   },
   "devDependencies": {
     "@types/node": "14",
