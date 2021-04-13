@@ -9,6 +9,7 @@
         "gruntfuggly.todo-tree", 
         "redhat.vscode-yaml", 
         "raynigon.nginx-formatter", 
-        "william-voyek.vscode-nginx"
+        "william-voyek.vscode-nginx", 
+        "cweijan.vscode-mysql-client2"
     ]
 }
