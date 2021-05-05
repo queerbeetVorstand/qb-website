@@ -3,14 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "init_dev": "dotenv -e app/.env -- bash app/scripts/init_dev.bash",
     "dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml up -d",
     "dockerized_dev": "next",
-    "stop_dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml up -d",
-    "init:database": "echo 'Still needs configuring'",
-    "init:cms": "dotenv -e app/.env -- node app/scripts/init_cms.js",
-    "generate:data_model_dump": "dotenv -e app/.env -- bash app/scripts/gen_data_model_dump.bash",
-    "generate:openapi_typedefs": "dotenv -e app/.env -- bash app/scripts/gen_openapi_typedefs.bash",
-    "build": "echo 'Still needs configuring!'"
+    "stop_dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml down",
+    "restart_dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml restart",
+    "gen:data_model_dump": "dotenv -e app/.env -- bash app/scripts/gen_data_model_dump.bash",
+    "gen:openapi_typedefs": "dotenv -e app/.env -- bash app/scripts/gen_openapi_typedefs.bash", 
+    "gen:dev_data_dump": "dotenv -e app/.env -- bash app/scripts/gen_dev_data_dump.bash", 
+    "cleanup": "sudo rm -R data/*"
   },
   "engines": {
     "node": ">=14 <16",

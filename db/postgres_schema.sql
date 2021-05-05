@@ -21,41 +21,22 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: about; Type: TABLE; Schema: public; Owner: directus
+-- Name: dates; Type: TABLE; Schema: public; Owner: directus
 --
 
-CREATE TABLE public.about (
-    id integer NOT NULL,
-    user_updated uuid,
-    date_updated timestamp with time zone,
-    text text,
-    cover uuid
+CREATE TABLE public.dates (
+    id uuid NOT NULL,
+    start_date date NOT NULL,
+    end_date date,
+    start_time time without time zone,
+    end_time time without time zone,
+    repetition_unit character varying(255) DEFAULT NULL::character varying,
+    repetition_interval integer,
+    event uuid
 );
 
 
-ALTER TABLE public.about OWNER TO directus;
-
---
--- Name: about_id_seq; Type: SEQUENCE; Schema: public; Owner: directus
---
-
-CREATE SEQUENCE public.about_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.about_id_seq OWNER TO directus;
-
---
--- Name: about_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: directus
---
-
-ALTER SEQUENCE public.about_id_seq OWNED BY public.about.id;
-
+ALTER TABLE public.dates OWNER TO directus;
 
 --
 -- Name: directus_activity; Type: TABLE; Schema: public; Owner: directus
@@ -538,10 +519,55 @@ ALTER SEQUENCE public.directus_webhooks_id_seq OWNED BY public.directus_webhooks
 
 
 --
--- Name: about id; Type: DEFAULT; Schema: public; Owner: directus
+-- Name: events; Type: TABLE; Schema: public; Owner: directus
 --
 
-ALTER TABLE ONLY public.about ALTER COLUMN id SET DEFAULT nextval('public.about_id_seq'::regclass);
+CREATE TABLE public.events (
+    id uuid NOT NULL,
+    status character varying(255) DEFAULT 'draft'::character varying NOT NULL,
+    user_created uuid,
+    date_created timestamp with time zone,
+    title character varying(255) DEFAULT NULL::character varying NOT NULL,
+    description text NOT NULL,
+    title_image uuid
+);
+
+
+ALTER TABLE public.events OWNER TO directus;
+
+--
+-- Name: events_directus_files_2; Type: TABLE; Schema: public; Owner: directus
+--
+
+CREATE TABLE public.events_directus_files_2 (
+    id integer NOT NULL,
+    events_id uuid,
+    directus_files_id uuid
+);
+
+
+ALTER TABLE public.events_directus_files_2 OWNER TO directus;
+
+--
+-- Name: events_directus_files_2_id_seq; Type: SEQUENCE; Schema: public; Owner: directus
+--
+
+CREATE SEQUENCE public.events_directus_files_2_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.events_directus_files_2_id_seq OWNER TO directus;
+
+--
+-- Name: events_directus_files_2_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: directus
+--
+
+ALTER SEQUENCE public.events_directus_files_2_id_seq OWNED BY public.events_directus_files_2.id;
 
 
 --
@@ -601,11 +627,18 @@ ALTER TABLE ONLY public.directus_webhooks ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- Name: about about_pkey; Type: CONSTRAINT; Schema: public; Owner: directus
+-- Name: events_directus_files_2 id; Type: DEFAULT; Schema: public; Owner: directus
 --
 
-ALTER TABLE ONLY public.about
-    ADD CONSTRAINT about_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.events_directus_files_2 ALTER COLUMN id SET DEFAULT nextval('public.events_directus_files_2_id_seq'::regclass);
+
+
+--
+-- Name: dates dates_pkey; Type: CONSTRAINT; Schema: public; Owner: directus
+--
+
+ALTER TABLE ONLY public.dates
+    ADD CONSTRAINT dates_pkey PRIMARY KEY (id);
 
 
 --
@@ -734,6 +767,22 @@ ALTER TABLE ONLY public.directus_users
 
 ALTER TABLE ONLY public.directus_webhooks
     ADD CONSTRAINT directus_webhooks_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: events_directus_files_2 events_directus_files_2_pkey; Type: CONSTRAINT; Schema: public; Owner: directus
+--
+
+ALTER TABLE ONLY public.events_directus_files_2
+    ADD CONSTRAINT events_directus_files_2_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: events events_pkey; Type: CONSTRAINT; Schema: public; Owner: directus
+--
+
+ALTER TABLE ONLY public.events
+    ADD CONSTRAINT events_pkey PRIMARY KEY (id);
 
 
 --
