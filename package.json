@@ -3,15 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "init_dev": "dotenv -e app/.env -- bash app/scripts/init_dev.bash",
-    "dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml up -d",
-    "dockerized_dev": "next",
-    "stop_dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml down",
-    "restart_dev": "dotenv -e app/.env -- docker-compose -f app/docker-compose.yml restart",
-    "gen:data_model_dump": "dotenv -e app/.env -- bash app/scripts/gen_data_model_dump.bash",
-    "gen:openapi_typedefs": "dotenv -e app/.env -- bash app/scripts/gen_openapi_typedefs.bash", 
-    "gen:dev_data_dump": "dotenv -e app/.env -- bash app/scripts/gen_dev_data_dump.bash", 
-    "cleanup": "sudo rm -R data/*"
+    "dev": "next",
+    "build": "next build", 
+    "start": "next start"
   },
   "engines": {
     "node": ">=14 <16",
@@ -33,14 +27,10 @@
     "@types/react-dom": "17",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
-    "directus": "^9.0.0-rc.57",
-    "dotenv-cli": "^4.0.0",
     "eslint": "^7.23.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-react": "^7.23.1",
-    "openapi-typescript": "^3.2.2",
     "prettier": "^2.0.5",
-    "ts-node": "^9.1.1",
     "typescript": "4"
   }
 }

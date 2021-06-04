@@ -16,6 +16,3 @@ yarn-error.log*
 
 # Next.js
 /.next
-
-# Development databases
-/data
