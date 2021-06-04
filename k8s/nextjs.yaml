@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextjs
+spec:
+  ports:
+    - port: 3000
+  selector:
+    app: nextjs
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs
+spec:
+  selector:
+    matchLabels:
+      app: nextjs
+  template:
+    metadata:
+      labels:
+        app: nextjs
+    spec:
+      containers:
+        - name: qb-website
+          image: qb-website
+          ports:
+            - containerPort: 3000
