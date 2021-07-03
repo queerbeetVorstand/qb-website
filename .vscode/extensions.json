@@ -8,11 +8,7 @@
         "esbenp.prettier-vscode", 
         "gruntfuggly.todo-tree", 
         "redhat.vscode-yaml", 
-        "raynigon.nginx-formatter", 
-        "william-voyek.vscode-nginx", 
-        "cweijan.vscode-mysql-client2", 
         "eg2.vscode-npm-script", 
-        "christian-kohler.npm-intellisense", 
-        "cweijan.vscode-mysql-client2"
+        "christian-kohler.npm-intellisense"
     ]
 }
