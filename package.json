@@ -18,6 +18,7 @@
     "next": "10",
     "react": "17",
     "react-dom": "17",
+    "react-feather": "^2.0.9",
     "react-markdown": "^5.0.3",
     "swr": "^0.5.5"
   },
