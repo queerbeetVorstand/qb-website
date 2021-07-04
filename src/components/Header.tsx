@@ -7,7 +7,7 @@ import QBLogo from "./QBLogo";
 export default function Header(): ReactElement {
   return (
     <Box display="flex" justifyContent="flex-end">
-        <Box flexGrow={1}>
+        <Box flexGrow={1} position="relative" top={8}>
           <QBLogo />
         </Box>
         <Box display="flex" alignItems="center">
