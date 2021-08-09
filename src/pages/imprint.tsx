@@ -20,7 +20,7 @@ export default function About(): ReactElement {
         <Text variant="h4">
           Kontakt
         </Text>
-        info[at]queerkastle.de
+        vorstand[at]queerbeet.org
       </Container>
     </React.Fragment>
   );
