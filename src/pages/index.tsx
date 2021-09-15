@@ -3,10 +3,12 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Link from "@/components/Link";
+import Header from "@/components/Header";
 
 export default function Index(): ReactElement {
   return (
     <Container maxWidth="sm">
+      <Header />
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Queerbeet! 🏳️‍🌈
