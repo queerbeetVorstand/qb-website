@@ -8,8 +8,7 @@
     "start": "next start"
   },
   "engines": {
-    "node": ">=14 <17",
-    "vscode": "^1.55.0"
+    "node": ">=14 <17"
   },
   "dependencies": {
     "@directus/sdk": "^9.0.0-rc.56",
