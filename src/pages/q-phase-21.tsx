@@ -12,13 +12,14 @@ export default function Index(): ReactElement {
       <Header />
       <Box my={4}>
         <Text variant="h5">
-          🚧 Hier entsteht gerade noch die Website der Queerbeet Hochschulgruppe 🚧
+          🌈🥳 Hier gibt es bald weitere Infos zur Q-Phase 2021 in Karlsruhe 🥳🌈
         </Text>
         <Typography variant="body1">
-          Für weitere Infos zu uns und den Kontakt zu unseren Mitgliedern kannst du gerne unserer
+          Du kannst dich solange schon einmal bei unserer
           <Link href="https://www.lists.kit.edu/sympa/subscribe/queerbeet" target="_blank"> öffentlichen Mailingliste</Link> (~1 E-Mail/Woche) 
           oder unserem
-          <Link href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD" target="_blank"> Rocket.Chat Server</Link> beitreten.
+          <Link href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD" target="_blank"> Rocket.Chat Server</Link> anmelden, 
+          um immer auf dem Laufenden zu bleiben.
         </Typography>
       </Box>
     </Container>
