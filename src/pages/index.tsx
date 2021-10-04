@@ -16,7 +16,7 @@ export default function Index(): ReactElement {
         </Text>
         <Typography variant="body1">
           Für weitere Infos zu uns und den Kontakt zu unseren Mitgliedern kannst du gerne unserer
-          <Link href="https://www.lists.kit.edu/sympa/subscribe/queerbeet" target="_blank"> öffentlichen Mailingliste</Link> (~1 E-Mail/Woche) 
+          <Link href="https://www.lists.kit.edu/sympa/subscribe/queerbeet" target="_blank"> öffentlichen Mailingliste</Link> (~1&nbsp;E-Mail/Woche) 
           oder unserem
           <Link href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD" target="_blank"> Rocket.Chat Server</Link> beitreten.
         </Typography>
