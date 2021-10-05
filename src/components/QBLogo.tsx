@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Box } from "@mui/material";
-import Logo from "resources/qb_text.svg";
+import Logo from "@/resources/qb_text.svg";
 
 export default function QBLogo(): ReactElement {
   return (

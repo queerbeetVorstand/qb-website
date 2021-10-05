@@ -1,14 +1,14 @@
-import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { red, blueGrey } from "@mui/material/colors";
 
 // Create a theme instance.
-const theme = createTheme({
+const theme = responsiveFontSizes(createTheme({
   palette: {
     primary: {
-      main: "#12b3e3",
+      main: "#ED6B1B",
     },
     secondary: {
-      main: "#ED6B1B",
+      main: blueGrey[600],
     },
     error: {
       main: red.A400,
@@ -31,6 +31,6 @@ const theme = createTheme({
       },
     },
   },
-});
+}));
 
 export default theme;

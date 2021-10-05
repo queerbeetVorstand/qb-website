@@ -16,7 +16,7 @@ const borderBottomStyling = makeStyles({
 export default function Header(): ReactElement {
   const borderBottom = borderBottomStyling();
   return (
-    <Box display="flex" justifyContent="flex-end" className={borderBottom.root} sx={{mb: 4}}>
+    <Box display="flex" justifyContent="flex-end" className={borderBottom.root} sx={{mb: {xs: 3, sm: 5}}}>
       <Box flexGrow={1} position="relative" top={8}>
         <Link href="/">
           <QBLogo />
