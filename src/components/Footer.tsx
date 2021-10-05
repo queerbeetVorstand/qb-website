@@ -29,7 +29,7 @@ export default function Footer(): ReactElement {
 
   return (
     <Box bgcolor="secondary.main" py={2}>
-      <Container className={classes.footerContainer} maxWidth="md">
+      <Container className={classes.footerContainer} maxWidth="lg">
         {footerLinks.map(({ name, href }) => (
           <Box key={href} mr={3}>
             <Link href={href} className={classes.footerLink} underline="none">

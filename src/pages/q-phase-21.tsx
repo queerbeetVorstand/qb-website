@@ -43,8 +43,11 @@ export default function Index(): ReactElement {
         }}
       >
         <Header />
-        <Text variant="h4" component="h1">
-          Q-Phase - Queere Orientierungsphase in Karlsruhe
+        <Text variant="h3" component="h1">
+          Q-Phase
+        </Text>
+        <Text variant="h5" component="div">
+          Queere Orientierungsphase in Karlsruhe
         </Text>
         <Text variant="h5" component="div">
           26. bis 28. November 2021
@@ -60,12 +63,13 @@ export default function Index(): ReactElement {
             sx={{
               pb: { xs: 0, sm: 1 },
               pt: { xs: 2, sm: 2 },
-              borderTop: "3px solid",
-              borderBottom: "3px solid",
+              borderTop: "2px solid",
+              borderBottom: "2px solid",
               display: "flex",
               justifyContent: "center",
               alignItems: "baseline",
               flexWrap: "wrap",
+              color: "secondary.main"
             }}
           >
             <Text
@@ -114,8 +118,9 @@ export default function Index(): ReactElement {
           <Spacer />
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
-              variant="contained"
+              variant="outlined"
               color="primary"
+              size="large"
               sx={{ width: "100%" }}
               href="https://rebrand.ly/q-phase-21-anmeldung"
               target="_blank"
@@ -125,8 +130,9 @@ export default function Index(): ReactElement {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
+              size="large"
               sx={{ width: "100%" }}
               href="/Q-Phase_Kennenlern-Treffen.ics"
               target="_blank"
@@ -138,8 +144,9 @@ export default function Index(): ReactElement {
           <Spacer />
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
+              size="large"
               sx={{ width: "100%" }}
               href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2Fu5kgtj"
               target="_blank"
@@ -149,8 +156,9 @@ export default function Index(): ReactElement {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
+              size="large"
               sx={{ width: "100%" }}
               href="https://www.lists.kit.edu/sympa/subscribe/queerbeet"
               target="_blank"
