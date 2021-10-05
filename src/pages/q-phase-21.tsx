@@ -85,7 +85,7 @@ export default function Index(): ReactElement {
           .<br />
           Wenn du Lust hast mitzumachen, dann melde dich am besten gleich über
           den Button unten an. Wegen Corona kann es sein, dass wir nur begrenzte
-          Plätze haben werden, weshalb eine früzeitige Anmeldung wichtig ist.
+          Plätze haben werden, weshalb eine frühzeitige Anmeldung wichtig ist.
           <br />
           Speichere dir auch diese Seite ab, da es hier in nächster Zeit weitere
           Infos zum Programm und co. geben wird.
