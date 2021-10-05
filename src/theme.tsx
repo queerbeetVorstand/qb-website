@@ -21,7 +21,7 @@ const theme = responsiveFontSizes(createTheme({
           font-family: 'Hello';
           font-style: normal;
           font-weight: 400;
-          src: local('Hello'), url(/fonts/hello.otf) format('otf');
+          src: local('Hello'), url(/fonts/hello.otf) format('opentype');
         }
       `,
     },
