@@ -8,7 +8,7 @@ const theme = responsiveFontSizes(createTheme({
       main: "#ED6B1B",
     },
     secondary: {
-      main: blueGrey[600],
+      main: blueGrey[800],
     },
     error: {
       main: red.A400,

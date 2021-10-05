@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Header from "@/components/Header";
 import Link from "@/components/Link";
 import { Button, Grid } from "@mui/material";
+import { blueGrey } from "@mui/material/colors";
 
 const colorfulText = {
   backgroundImage:
@@ -15,13 +16,33 @@ const colorfulText = {
 };
 
 const Spacer = () => (
-  <Grid item xs={2} display={{ xs: "none", md: "block" }}></Grid>
+  <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
 
 export default function Index(): ReactElement {
   return (
-    <Container maxWidth="md">
-      <Box sx={{ bgcolor: "white" }}>
+    <Box
+      sx={{
+        /*backgroundImage:
+          "linear-gradient(320deg, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)",*/
+        background: `linear-gradient(135deg, #e1e1e1 25%, transparent 25%) -50px 0,
+          linear-gradient(225deg, #e1e1e1 25%, transparent 25%) -50px 0,
+          linear-gradient(315deg, #e1e1e1 25%, transparent 25%),
+          linear-gradient(45deg, #e1e1e1 25%, transparent 25%)`,
+        backgroundSize: "100px 100px",
+        backgroundColor: "#cfd8dc",
+      }}
+    >
+      <Container
+        maxWidth="lg"
+        sx={{
+          minHeight: "100vh",
+          bgcolor: "white",
+          px: 3,
+          boxShadow: 4,
+          pb: 3,
+        }}
+      >
         <Header />
         <Text variant="h4" component="h1">
           Q-Phase - Queere Orientierungsphase in Karlsruhe
@@ -31,7 +52,6 @@ export default function Index(): ReactElement {
         </Text>
         <Box
           sx={{
-            textAlign: "center",
             my: { xs: 3, sm: 5 },
             display: "flex",
             justifyContent: "center",
@@ -39,8 +59,8 @@ export default function Index(): ReactElement {
         >
           <Box
             sx={{
-              pb: { xs: 0, sm: 2 },
-              pt: { xs: 2, sm: 3 },
+              pb: { xs: 0, sm: 1 },
+              pt: { xs: 2, sm: 2 },
               borderTop: "3px solid",
               borderBottom: "3px solid",
               display: "flex",
@@ -91,15 +111,9 @@ export default function Index(): ReactElement {
           Speichere dir auch diese Seite ab, da es hier in nächster Zeit weitere
           Infos zum Programm und co. geben wird.
         </Text>
-        <Grid
-          container
-          spacing={2}
-          mt={{ xs: 1, sm: 3 }}
-          mb={{ xs: 5, sm: 8 }}
-          pt={0}
-        >
+        <Grid container spacing={2} my={{ xs: 1, sm: 3 }} pt={0}>
           <Spacer />
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
               variant="contained"
               color="primary"
@@ -110,7 +124,7 @@ export default function Index(): ReactElement {
               Zur Q-Phase anmelden
             </Button>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
               variant="contained"
               color="secondary"
@@ -123,7 +137,7 @@ export default function Index(): ReactElement {
           </Grid>
           <Spacer />
           <Spacer />
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
               variant="contained"
               color="secondary"
@@ -134,7 +148,7 @@ export default function Index(): ReactElement {
               Chat-Server beitreten
             </Button>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
               variant="contained"
               color="secondary"
@@ -147,7 +161,7 @@ export default function Index(): ReactElement {
           </Grid>
           <Spacer />
         </Grid>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 }
