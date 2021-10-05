@@ -32,15 +32,15 @@ export default function Index(): ReactElement {
         <Box
           sx={{
             textAlign: "center",
-            my: {xs: 3, sm: 5},
+            my: { xs: 3, sm: 5 },
             display: "flex",
             justifyContent: "center",
           }}
         >
           <Box
             sx={{
-              p: {xs: 1, sm: 2},
-              pt: {xs: 2, sm: 3},
+              pb: { xs: 1, sm: 2 },
+              pt: { xs: 2, sm: 3 },
               borderTop: "3px solid",
               borderBottom: "3px solid",
               display: "flex",
@@ -53,7 +53,7 @@ export default function Index(): ReactElement {
               variant="h3"
               component="div"
               gutterBottom={false}
-              sx={{ fontWeight: "bold", whiteSpace: "nowrap", mr: 2 }}
+              sx={{ fontWeight: "bold", whiteSpace: "nowrap", mx: 1 }}
             >
               F*ck last year,
             </Text>
@@ -67,13 +67,14 @@ export default function Index(): ReactElement {
                 fontFamily: "Hello",
                 p: 1,
                 whiteSpace: "nowrap",
+                mx: 1,
               }}
             >
               let&apos;s be queer!
             </Text>
           </Box>
         </Box>
-        <Text variant="body1" paragraph sx={{ mt: {xs: 3, sm: 5} }}>
+        <Text variant="body1" paragraph sx={{ mt: { xs: 3, sm: 5 } }}>
           Mit diesem Motto startet dieses Jahr unsere queere Orientierungsphase,
           die &rdquo;Q-Phase&rdquo;, endlich wieder in Person!
           <br />
@@ -90,7 +91,13 @@ export default function Index(): ReactElement {
           Speichere dir auch diese Seite ab, da es hier in nächster Zeit weitere
           Infos zum Programm und co. geben wird.
         </Text>
-        <Grid container spacing={2} mt={{xs: 1, sm: 3}} mb={{xs: 5, sm: 8}} pt={0}>
+        <Grid
+          container
+          spacing={2}
+          mt={{ xs: 1, sm: 3 }}
+          mb={{ xs: 5, sm: 8 }}
+          pt={0}
+        >
           <Spacer />
           <Grid item xs={12} sm={6} md={4}>
             <Button

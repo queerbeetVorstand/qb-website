@@ -38,7 +38,7 @@ export default function Footer(): ReactElement {
           </Box>
         ))}
         <Box flexGrow={1}></Box>
-        <Box className={classes.footerLink}>Queerbeet - Die LGBTQIA*-Hochschulgruppe</Box>
+        <Box className={classes.footerLink} sx={{ml: 2}}>Queerbeet - Die LGBTQIA*-Hochschulgruppe</Box>
       </Container>
     </Box>
   );
