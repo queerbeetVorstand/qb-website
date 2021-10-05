@@ -6,14 +6,6 @@ import Header from "@/components/Header";
 import Link from "@/components/Link";
 import { Button, Grid } from "@mui/material";
 
-const colorfulText = {
-  backgroundImage:
-    "linear-gradient(to right, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)",
-  backgroundClip: "text",
-  "-webkit-background-clip": "text",
-  color: "transparent",
-};
-
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
