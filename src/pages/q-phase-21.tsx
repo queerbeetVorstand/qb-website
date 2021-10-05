@@ -39,7 +39,7 @@ export default function Index(): ReactElement {
         >
           <Box
             sx={{
-              pb: { xs: 1, sm: 2 },
+              pb: { xs: 0, sm: 2 },
               pt: { xs: 2, sm: 3 },
               borderTop: "3px solid",
               borderBottom: "3px solid",
