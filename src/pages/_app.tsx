@@ -1,18 +1,20 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
-import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles";
+import {
+  ThemeProvider,
+  Theme,
+  StyledEngineProvider,
+} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/theme";
 import { Box } from "@mui/material";
 import Footer from "@/components/Footer";
 
-
-declare module '@mui/styles/defaultTheme' {
+declare module "@mui/styles/defaultTheme" {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends Theme {}
 }
-
 
 export default function MyApp(props: AppProps): ReactElement {
   const { Component, pageProps } = props;
@@ -33,6 +35,14 @@ export default function MyApp(props: AppProps): ReactElement {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        ></link>
       </Head>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
