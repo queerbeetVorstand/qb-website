@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex"
   },
   footerLink: {
-    color: theme.palette.grey[300],
+    color: theme.palette.common.white,
   },
 }));
 
@@ -37,6 +37,8 @@ export default function Footer(): ReactElement {
             </Link>
           </Box>
         ))}
+        <Box flexGrow={1}></Box>
+        <Box className={classes.footerLink}>Queerbeet - Die LGBTQIA*-Hochschulgruppe</Box>
       </Container>
     </Box>
   );

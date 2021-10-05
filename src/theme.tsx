@@ -12,15 +12,25 @@ const theme = createTheme({
     },
     error: {
       main: red.A400,
-    }
+    },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: 'Hello';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Hello'), url(/fonts/hello.otf) format('otf');
+        }
+      `,
+    },
     MuiTypography: {
       defaultProps: {
-        gutterBottom: true
-      }
-    }
-  }
+        gutterBottom: true,
+      },
+    },
+  },
 });
 
 export default theme;
