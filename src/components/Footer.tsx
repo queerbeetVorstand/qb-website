@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
-import Container from "@material-ui/core/Container";
-import Box from "@material-ui/core/Box";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Link from "@/components/Link";
-import { makeStyles } from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
 
 const footerLinks = [
   {
@@ -32,7 +32,7 @@ export default function Footer(): ReactElement {
       <Container className={classes.footerContainer} maxWidth="md">
         {footerLinks.map(({ name, href }) => (
           <Box key={href} mr={3}>
-            <Link href={href} className={classes.footerLink}>
+            <Link href={href} className={classes.footerLink} underline="none">
               {name}
             </Link>
           </Box>

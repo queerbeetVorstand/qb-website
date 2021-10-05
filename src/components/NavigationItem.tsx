@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Link, Typography } from "@material-ui/core";
+import { Link, Typography } from "@mui/material";
 
 export default function NavigationItem(props: NavigationItemProperties): ReactElement {
   return (

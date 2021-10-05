@@ -1,10 +1,10 @@
 import React, { ReactElement, useState } from "react";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Drawer from "@material-ui/core/Drawer";
-import { useMediaQuery } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Drawer from "@mui/material/Drawer";
+import { useMediaQuery } from "@mui/material";
 import { Menu as MenuIcon } from 'react-feather';
 
 interface GlobalNavigationProperties {
