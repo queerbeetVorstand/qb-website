@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Header from "@/components/Header";
 import Link from "@/components/Link";
 import { Button, Grid } from "@mui/material";
-import { blueGrey } from "@mui/material/colors";
 
 const colorfulText = {
   backgroundImage:
