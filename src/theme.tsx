@@ -5,7 +5,7 @@ import { red, blueGrey } from "@mui/material/colors";
 const theme = responsiveFontSizes(createTheme({
   palette: {
     primary: {
-      main: "#ED6B1B",
+      main: "#b337a2",
     },
     secondary: {
       main: blueGrey[800],

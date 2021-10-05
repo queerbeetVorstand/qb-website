@@ -83,10 +83,10 @@ export default function Index(): ReactElement {
 
             <Text
               variant="h2"
+              color="primary"
               component="div"
               gutterBottom={false}
               sx={{
-                ...colorfulText,
                 fontFamily: "Hello",
                 p: 1,
                 whiteSpace: "nowrap",
