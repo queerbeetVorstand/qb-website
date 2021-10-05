@@ -42,7 +42,7 @@ export default function GlobalNavigation(props: GlobalNavigationProperties): Rea
       </Drawer>
     </React.Fragment>
   ) : (
-    <Box display="flex" flexWrap="noWrap" justifyContent="flex-end">
+    <Box display="flex" flexWrap="nowrap" justifyContent="flex-end">
       {React.Children.map(props.children, (child, index) => (
             <Box px={1} key={index}>
               {child}
