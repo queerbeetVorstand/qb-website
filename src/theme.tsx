@@ -1,20 +1,36 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import red from "@material-ui/core/colors/red";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { red, blueGrey } from "@mui/material/colors";
 
 // Create a theme instance.
-const theme = createMuiTheme({
+const theme = responsiveFontSizes(createTheme({
   palette: {
-    type: 'light',
     primary: {
-      main: "#12b3e3",
+      main: "#ED6B1B",
     },
     secondary: {
-      main: "#ED6B1B",
+      main: blueGrey[800],
     },
     error: {
       main: red.A400,
-    }
+    },
   },
-});
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: 'Hello';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Hello'), url(/fonts/hello.otf) format('opentype');
+        }
+      `,
+    },
+    MuiTypography: {
+      defaultProps: {
+        gutterBottom: true,
+      },
+    },
+  },
+}));
 
 export default theme;

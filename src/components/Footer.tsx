@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
-import Container from "@material-ui/core/Container";
-import Box from "@material-ui/core/Box";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Link from "@/components/Link";
-import { makeStyles } from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
 
 const footerLinks = [
   {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex"
   },
   footerLink: {
-    color: theme.palette.grey[300],
+    color: theme.palette.common.white,
   },
 }));
 
@@ -29,14 +29,16 @@ export default function Footer(): ReactElement {
 
   return (
     <Box bgcolor="secondary.main" py={2}>
-      <Container className={classes.footerContainer} maxWidth="md">
+      <Container className={classes.footerContainer} maxWidth="lg">
         {footerLinks.map(({ name, href }) => (
           <Box key={href} mr={3}>
-            <Link href={href} className={classes.footerLink}>
+            <Link href={href} className={classes.footerLink} underline="none">
               {name}
             </Link>
           </Box>
         ))}
+        <Box flexGrow={1}></Box>
+        <Box className={classes.footerLink} sx={{ml: 2}}>Queerbeet - Die LGBTQIA*-Hochschulgruppe</Box>
       </Container>
     </Box>
   );
