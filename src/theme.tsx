@@ -1,7 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
-import CreamCake from "@/resources/cream_cake.otf";
-import Hello from "@/resources/hello.otf";
 
 const creamcake = {
   fontFamily: 'CreamCake',
@@ -9,7 +7,7 @@ const creamcake = {
   fontWeight: 400,
   src: `
     local('Cream Cake'),
-    url(${CreamCake}) format('otf')
+    url(/fonts/cream_cake.otf) format('otf')
   `
 };
 
@@ -19,7 +17,7 @@ const hello = {
   fontWeight: 400,
   src: `
     local('Hello'),
-    url(${Hello}) format('otf')
+    url(/fonts/hello.otf) format('otf')
   `
 };
 
