@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Text from "@mui/material/Typography";
 import Link from "@/components/Link";
-import Header from "@/components/Header";
+import Header from "@/sections/Header";
 
 export default function Index(): ReactElement {
   return (

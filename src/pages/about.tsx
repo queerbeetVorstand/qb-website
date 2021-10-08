@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Header from "@/components/Header";
+import Header from "@/sections/Header";
 
 export default function About(): ReactElement {
   return (

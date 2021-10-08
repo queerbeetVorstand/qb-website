@@ -9,7 +9,7 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/theme";
 import { Box } from "@mui/material";
-import Footer from "@/components/Footer";
+import Footer from "@/sections/Footer";
 
 declare module "@mui/styles/defaultTheme" {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
