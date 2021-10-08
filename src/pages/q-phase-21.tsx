@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Container from "@mui/material/Container";
 import Text from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Header from "@/components/Header";
+import Header from "@/sections/Header";
 import Link from "@/components/Link";
 import { Button, Grid } from "@mui/material";
 

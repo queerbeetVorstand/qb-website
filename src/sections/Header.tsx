@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Box from "@mui/material/Box";
-import QBLogo from "./QBLogo";
+import QBLogo from "@/components/QBLogo";
 import Link from "@/components/Link";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import NavigationItem from "@/components/NavigationItem";

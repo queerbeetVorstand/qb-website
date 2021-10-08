@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import Text from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Header from "@/components/Header";
+import Header from "@/sections/Header";
 
 export default function About(): ReactElement {
   return (
