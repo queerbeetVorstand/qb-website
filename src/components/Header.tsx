@@ -28,7 +28,6 @@ export default function Header(): ReactElement {
         <Box display="flex" alignItems="stretch">
           <GlobalNavigation>
             <NavigationItem destinationUrl="/" selected>Startseite</NavigationItem>
-            <NavigationItem destinationUrl="/about">Über uns</NavigationItem>
           </GlobalNavigation>
         </Box>
       </Box>
