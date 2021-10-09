@@ -4,8 +4,8 @@ import Logo from "@/resources/qb_text.svg";
 
 export default function QBLogo(): ReactElement {
   return (
-    <Box m={1}>
-      <Logo height={50}/>
+    <Box m={1} mb={0}>
+      <Logo height={50} />
     </Box>
   );
 }
