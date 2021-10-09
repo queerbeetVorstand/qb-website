@@ -17,7 +17,7 @@ export default function Header(): ReactElement {
       }}
     >
       <Box
-        pt={{ xs: 1.5, sm: 2 }}
+        pt={{ xs: 1.2, sm: 1.5 }}
         display="flex"
         justifyContent="flex-end"
         sx={{ boxShadow: "0 2px 5px -4px black" }}

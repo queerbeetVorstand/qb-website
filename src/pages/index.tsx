@@ -1,40 +1,49 @@
 import React, { ReactElement } from "react";
-import Box from "@mui/material/Box";
 import Text from "@mui/material/Typography";
 import Link from "@/ui/Link";
+import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Box } from "@mui/material";
 
 export default function Index(): ReactElement {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <React.Fragment>
       <Header />
       <Body>
-        <Box my={4}>
-          <Text variant="h5">
-            🚧 Hier entsteht gerade noch die Website der Queerbeet
-            Hochschulgruppe 🚧
-          </Text>
-          <Text variant="body1">
-            Für weitere Infos zu uns und den Kontakt zu unseren Mitgliedern
-            kannst du gerne unserer{" "}
-            <Link
-              href="https://www.lists.kit.edu/sympa/subscribe/queerbeet"
-              target="_blank"
-            >
-              öffentlichen Mailingliste
-            </Link>{" "}
-            (~1 E-Mail/Woche) oder unserem
-            <Link
-              href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD"
-              target="_blank"
-            >
-              {" "}
-              Rocket.Chat Server
-            </Link>{" "}
-            beitreten.
-          </Text>
+        <Box mt={{ xs: 3, md: 6 }}>
+          <img
+            width="100%"
+            src={
+              desktop ? "/images/group_pic.jpg" : "/images/group_pic_mobile.jpg"
+            }
+          ></img>
         </Box>
+        <QHeading variant="h1">Hey!</QHeading>
+        <Text variant="body1" mt={3}>
+          <p>
+            Wir sind Studierende der Hochschulen in Karlsruhe, die mit anderen
+            queeren* Menschen in Verbindung treten, mit ihnen Veranstaltungen
+            besuchen und auch selbst welche organisieren.{" "}
+          </p>
+          <p>
+            Möchtest du noch mehr erfahren? Oder hast du Lust, mal
+            vorbeizuschauen? Wir treffen uns aktuell jeden Donnerstag 17:30 im{" "}
+            <Link href="https://goo.gl/maps/JCHnMXudYRPwoiGu7">Z10</Link>, mal
+            einfach so zum Quatschen oder für besondere Events wie Spielabende,
+            Filmabende, Basteln, etc... Die meisten dieser Veranstaltungen
+            findest du auf der Website{" "}
+            <Link href="https://queerka.de">queerka.de</Link>, wo auch andere
+            queere Gruppen aus Karlsruhe ihre Events eintragen.{" "}
+          </p>
+          <p>Komm doch mal vorbei! Wir freuen uns auf dich. 😊</p>
+          <p>PS: Auch Nicht-Studierende sind herzlich willkommen.</p>
+        </Text>
       </Body>
     </React.Fragment>
   );

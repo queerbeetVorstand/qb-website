@@ -8,8 +8,12 @@ interface Props {
   underline?: boolean;
 }
 
-const QHeading: FunctionComponent<Props> = ({ variant, children, underline = true }) => (
-  <Typography variant={variant} sx={{mt: 5, mb: 3}}>
+const QHeading: FunctionComponent<Props> = ({
+  variant,
+  children,
+  underline = true,
+}) => (
+  <Typography variant={variant} sx={{ mt: { xs: 3, md: 5 }, mb: 3 }}>
     {children}
     {underline ? (
       <Box bgcolor="primary.main" height="0.15em" width="2em" mt={1}></Box>
