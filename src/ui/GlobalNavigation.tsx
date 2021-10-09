@@ -6,7 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
 import { Typography, useMediaQuery } from "@mui/material";
 import { Menu as MenuIcon } from "react-feather";
-import NavigationItem from "@/components/NavigationItem";
+import NavigationItem from "@/ui/NavigationItem";
 
 interface GlobalNavigationProperties {
   children: React.ReactNode;
