@@ -1,11 +1,11 @@
 import React, { ReactElement } from "react";
 import Text from "@mui/material/Typography";
 import Header from "@/sections/Header";
-import BodyContainer from "@/sections/BodyContainer";
+import Body from "@/sections/Body";
 
 export default function About(): ReactElement {
   return (
-    <BodyContainer>
+    <Body>
       <Header />
       <Text variant="h4" component="h1">
         Impressum
@@ -26,6 +26,6 @@ export default function About(): ReactElement {
       <Text variant="body1" paragraph>
         vorstand[at]queerbeet.org
       </Text>
-    </BodyContainer>
+    </Body>
   );
 }

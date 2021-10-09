@@ -3,11 +3,11 @@ import Box from "@mui/material/Box";
 import Text from "@mui/material/Typography";
 import Link from "@/ui/Link";
 import Header from "@/sections/Header";
-import BodyContainer from "@/sections/BodyContainer";
+import Body from "@/sections/Body";
 
 export default function Index(): ReactElement {
   return (
-    <BodyContainer>
+    <Body>
       <Header />
       <Box my={4}>
         <Text variant="h5">
@@ -34,6 +34,6 @@ export default function Index(): ReactElement {
           beitreten.
         </Text>
       </Box>
-    </BodyContainer>
+    </Body>
   );
 }

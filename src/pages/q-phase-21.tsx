@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { Button, Grid } from "@mui/material";
 import Link from "@/ui/Link";
 import Header from "@/sections/Header";
-import BodyContainer from "@/sections/BodyContainer"
+import Body from "@/sections/Body"
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
@@ -12,7 +12,7 @@ const Spacer = () => (
 
 export default function QPhase21(): ReactElement {
   return (
-    <BodyContainer>
+    <Body>
       <Header />
       <Text variant="h3" component="h1">
         Q-Phase
@@ -139,6 +139,6 @@ export default function QPhase21(): ReactElement {
         </Grid>
         <Spacer />
       </Grid>
-    </BodyContainer>
+    </Body>
   );
 }
