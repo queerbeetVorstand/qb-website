@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Text from "@mui/material/Typography";
-import Link from "@/components/Link";
+import Link from "@/ui/Link";
 import Header from "@/sections/Header";
 
 export default function Index(): ReactElement {

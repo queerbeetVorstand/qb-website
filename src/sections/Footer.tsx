@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Link from "@/components/Link";
 import makeStyles from '@mui/styles/makeStyles';
+import Link from "@/ui/Link";
 
 const footerLinks = [
   {

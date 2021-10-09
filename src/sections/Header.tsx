@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react";
 import Box from "@mui/material/Box";
-import QBLogo from "@/components/QBLogo";
-import Link from "@/components/Link";
-import GlobalNavigation from "@/components/GlobalNavigation";
-import NavigationItem from "@/components/NavigationItem";
+import QBLogo from "@/ui/QBLogo";
+import Link from "@/ui/Link";
+import GlobalNavigation from "@/ui/GlobalNavigation";
+import NavigationItem from "@/ui/NavigationItem";
 
 export default function Header(): ReactElement {
 
