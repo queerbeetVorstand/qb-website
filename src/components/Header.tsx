@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import QBLogo from "./QBLogo";
 import makeStyles from "@mui/styles/makeStyles";
 import Link from "@/components/Link";
+import GlobalNavigation from "@/components/GlobalNavigation";
+import NavigationItem from "@/components/NavigationItem";
 
 const borderBottomStyling = makeStyles({
   root: {
@@ -16,11 +18,22 @@ const borderBottomStyling = makeStyles({
 export default function Header(): ReactElement {
   const borderBottom = borderBottomStyling();
   return (
-    <Box display="flex" justifyContent="flex-end" className={borderBottom.root} sx={{mb: {xs: 3, sm: 5}}}>
+    <Box
+      display="flex"
+      justifyContent="flex-end"
+      className={borderBottom.root}
+      sx={{ mb: { xs: 3, sm: 5 } }}
+    >
       <Box flexGrow={1} position="relative" top={8}>
         <Link href="/">
           <QBLogo />
         </Link>
+      </Box>
+      <Box display="flex" alignItems="center">
+        <GlobalNavigation>
+          <NavigationItem destinationUrl="/">Startseite</NavigationItem>
+          <NavigationItem destinationUrl="/about">Über uns</NavigationItem>
+        </GlobalNavigation>
       </Box>
     </Box>
   );
