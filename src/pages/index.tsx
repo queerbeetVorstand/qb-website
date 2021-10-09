@@ -7,33 +7,35 @@ import Body from "@/sections/Body";
 
 export default function Index(): ReactElement {
   return (
-    <Body>
+    <React.Fragment>
       <Header />
-      <Box my={4}>
-        <Text variant="h5">
-          🚧 Hier entsteht gerade noch die Website der Queerbeet Hochschulgruppe
-          🚧
-        </Text>
-        <Text variant="body1">
-          Für weitere Infos zu uns und den Kontakt zu unseren Mitgliedern kannst
-          du gerne unserer{" "}
-          <Link
-            href="https://www.lists.kit.edu/sympa/subscribe/queerbeet"
-            target="_blank"
-          >
-            öffentlichen Mailingliste
-          </Link>{" "}
-          (~1 E-Mail/Woche) oder unserem
-          <Link
-            href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD"
-            target="_blank"
-          >
-            {" "}
-            Rocket.Chat Server
-          </Link>{" "}
-          beitreten.
-        </Text>
-      </Box>
-    </Body>
+      <Body>
+        <Box my={4}>
+          <Text variant="h5">
+            🚧 Hier entsteht gerade noch die Website der Queerbeet
+            Hochschulgruppe 🚧
+          </Text>
+          <Text variant="body1">
+            Für weitere Infos zu uns und den Kontakt zu unseren Mitgliedern
+            kannst du gerne unserer{" "}
+            <Link
+              href="https://www.lists.kit.edu/sympa/subscribe/queerbeet"
+              target="_blank"
+            >
+              öffentlichen Mailingliste
+            </Link>{" "}
+            (~1 E-Mail/Woche) oder unserem
+            <Link
+              href="https://go.rocket.chat/invite?host=chat.queerbeet.org&path=invite%2F9kvNdD"
+              target="_blank"
+            >
+              {" "}
+              Rocket.Chat Server
+            </Link>{" "}
+            beitreten.
+          </Text>
+        </Box>
+      </Body>
+    </React.Fragment>
   );
 }

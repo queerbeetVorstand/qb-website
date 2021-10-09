@@ -80,34 +80,37 @@ const renderActions = (actions: Action[]) => (
 
 export default function Contact(): ReactElement {
   return (
-    <Body>
+    <React.Fragment>
       <Header />
-      <QHeading variant="h1">Kontakt</QHeading>
-      <Typo variant="body1">
-        Hier findest du ein paar Möglichkeiten, wie du mit uns Kontakt aufnehmen
-        kannst.
-      </Typo>
-      <QHeading variant="h2">Community</QHeading>
-      <Typo variant="body1">
-        Unter uns schreiben wir meistens Nachrichten auf unserem Rocket.Chat
-        Server (gibt es auch als App) und die regelmäßigen Events der
-        Hochschulgruppe kündigen wir zusätzlich über unsere Mailingliste an. Du
-        kannst dich bei beiden einfach per Klick auf die Links unten anmelden.
-      </Typo>
-      {renderActions(memberActions)}
-      <Typo variant="body1">
-        Oder komm doch mal zu einem unserer Kaffeeklatsche dazu. Diese finden
-        i.d.R. immer Donnerstags von 17:30 bis 19:30 im{" "}
-        <Link href="https://goo.gl/maps/j65TS28gftuxx5pz8">Z10</Link> in
-        Karlsruhe statt (Gruppenraum im 2. OG).
-      </Typo>
-      <QHeading variant="h2">Vorstand</QHeading>
-      <Typo variant="body1">
-        Um Mitglied bei uns zu werden, als Organisation Kontakt mit uns zu
-        knüpfen, oder auch bei sonstigen Fragen und Anliegen, kannst du dich
-        direkt per Email an den Vorstand der Queerbeet wenden.
-      </Typo>
-      {renderActions(vsActions)}
-    </Body>
+      <Body>
+        <QHeading variant="h1">Kontakt</QHeading>
+        <Typo variant="body1">
+          Hier findest du ein paar Möglichkeiten, wie du mit uns Kontakt
+          aufnehmen kannst.
+        </Typo>
+        <QHeading variant="h2">Community</QHeading>
+        <Typo variant="body1">
+          Unter uns schreiben wir meistens Nachrichten auf unserem Rocket.Chat
+          Server (gibt es auch als App) und die regelmäßigen Events der
+          Hochschulgruppe kündigen wir zusätzlich über unsere Mailingliste an.
+          Du kannst dich bei beiden einfach per Klick auf die Links unten
+          anmelden.
+        </Typo>
+        {renderActions(memberActions)}
+        <Typo variant="body1">
+          Oder komm doch mal zu einem unserer Kaffeeklatsche dazu. Diese finden
+          i.d.R. immer Donnerstags von 17:30 bis 19:30 im{" "}
+          <Link href="https://goo.gl/maps/j65TS28gftuxx5pz8">Z10</Link> in
+          Karlsruhe statt (Gruppenraum im 2. OG).
+        </Typo>
+        <QHeading variant="h2">Vorstand</QHeading>
+        <Typo variant="body1">
+          Um Mitglied bei uns zu werden, als Organisation Kontakt mit uns zu
+          knüpfen, oder auch bei sonstigen Fragen und Anliegen, kannst du dich
+          direkt per Email an den Vorstand der Queerbeet wenden.
+        </Typo>
+        {renderActions(vsActions)}
+      </Body>
+    </React.Fragment>
   );
 }
