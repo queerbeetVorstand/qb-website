@@ -3,8 +3,9 @@ import Text from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Button, Grid } from "@mui/material";
 import Link from "@/ui/Link";
+import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
-import Body from "@/sections/Body"
+import Body from "@/sections/Body";
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
@@ -14,13 +15,11 @@ export default function QPhase21(): ReactElement {
   return (
     <Body>
       <Header />
-      <Text variant="h3" component="h1">
-        Q-Phase
-      </Text>
-      <Text variant="h5" component="div">
+      <QHeading variant="h1">Q-Phase</QHeading>
+      <Text variant="h3" component="div">
         Queere Orientierungsphase in Karlsruhe
       </Text>
-      <Text variant="h5" component="div">
+      <Text variant="h3" component="div">
         26. bis 28. November 2021
       </Text>
       <Box
@@ -44,7 +43,7 @@ export default function QPhase21(): ReactElement {
           }}
         >
           <Text
-            variant="h3"
+            variant="h1"
             component="div"
             gutterBottom={false}
             sx={{ fontWeight: "bold", whiteSpace: "nowrap", mx: 1 }}
@@ -53,7 +52,6 @@ export default function QPhase21(): ReactElement {
           </Text>
 
           <Text
-            variant="h2"
             color="primary"
             component="div"
             gutterBottom={false}
@@ -62,6 +60,7 @@ export default function QPhase21(): ReactElement {
               p: 1,
               whiteSpace: "nowrap",
               mx: 1,
+              fontSize: { xs: "3rem", sm: "3.4rem", md: "3.8rem", lg: "4.2rem" },
             }}
           >
             let&apos;s be queer!

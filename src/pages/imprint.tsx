@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import Text from "@mui/material/Typography";
+import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
 
@@ -7,12 +8,12 @@ export default function About(): ReactElement {
   return (
     <Body>
       <Header />
-      <Text variant="h4" component="h1">
+      <QHeading variant="h1">
         Impressum
-      </Text>
-      <Text variant="h5" component="h2">
+      </QHeading>
+      <QHeading variant="h2">
         Betreiber der Website
-      </Text>
+      </QHeading>
       <Text variant="body1" paragraph>
         Lorenzo Wormer
         <br />
@@ -20,9 +21,9 @@ export default function About(): ReactElement {
         <br />
         76131 Karlsruhe
       </Text>
-      <Text variant="h5" component="h2">
+      <QHeading variant="h2">
         Kontakt
-      </Text>
+      </QHeading>
       <Text variant="body1" paragraph>
         vorstand[at]queerbeet.org
       </Text>
