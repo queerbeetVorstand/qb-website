@@ -4,6 +4,7 @@ import QBLogo from "@/ui/QBLogo";
 import Link from "@/ui/Link";
 import GlobalNavigation from "@/ui/GlobalNavigation";
 import NavigationItem from "@/ui/NavigationItem";
+import { useRouter } from "next/router";
 
 export default function Header(): ReactElement {
   const navigationEntries: NavigationEntry[] = [
@@ -12,6 +13,7 @@ export default function Header(): ReactElement {
     { destinationUrl: "/contact", label: "Kontakt" },
   ];
 
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -39,11 +41,18 @@ export default function Header(): ReactElement {
         </Box>
         <Box display="flex" alignItems="stretch">
           <GlobalNavigation>
-            {navigationEntries.map((entry: NavigationEntry, index) => (
-              <NavigationItem key={index} destinationUrl={entry.destinationUrl}>
-                {entry.label}
-              </NavigationItem>
-            ))}
+            {navigationEntries.map((entry: NavigationEntry, index) => {
+              const selected = router.asPath === entry.destinationUrl;
+              return (
+                <NavigationItem
+                  key={index}
+                  destinationUrl={entry.destinationUrl}
+                  selected={selected}
+                >
+                  {entry.label}
+                </NavigationItem>
+              );
+            })}
           </GlobalNavigation>
         </Box>
       </Box>
