@@ -6,6 +6,12 @@ import GlobalNavigation from "@/ui/GlobalNavigation";
 import NavigationItem from "@/ui/NavigationItem";
 
 export default function Header(): ReactElement {
+  const navigationEntries: NavigationEntry[] = [
+    { destinationUrl: "/", label: "Startseite" },
+    { destinationUrl: "/q-phase-21", label: "Q-Phase" },
+    { destinationUrl: "/contact", label: "Kontakt" },
+  ];
+
   return (
     <Box
       sx={{
@@ -33,12 +39,19 @@ export default function Header(): ReactElement {
         </Box>
         <Box display="flex" alignItems="stretch">
           <GlobalNavigation>
-            <NavigationItem destinationUrl="/" selected>
-              Startseite
-            </NavigationItem>
+            {navigationEntries.map((entry: NavigationEntry, index) => (
+              <NavigationItem key={index} destinationUrl={entry.destinationUrl}>
+                {entry.label}
+              </NavigationItem>
+            ))}
           </GlobalNavigation>
         </Box>
       </Box>
     </Box>
   );
+}
+
+interface NavigationEntry {
+  destinationUrl: string;
+  label: string;
 }
