@@ -4,14 +4,17 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
-import { useMediaQuery } from "@mui/material";
-import { Menu as MenuIcon } from 'react-feather';
+import { Typography, useMediaQuery } from "@mui/material";
+import { Menu as MenuIcon } from "react-feather";
+import NavigationItem from "@/components/NavigationItem";
 
 interface GlobalNavigationProperties {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export default function GlobalNavigation(props: GlobalNavigationProperties): ReactElement {
+export default function GlobalNavigation(
+  props: GlobalNavigationProperties
+): ReactElement {
   const [state, setState] = useState({
     drawerOpen: false,
   });
@@ -28,26 +31,50 @@ export default function GlobalNavigation(props: GlobalNavigationProperties): Rea
 
   return isMobile ? (
     <React.Fragment>
-      <Button onClick={openDrawer}>
-        <MenuIcon />
+      <Button onClick={openDrawer} sx={{ overflow: "hidden", borderRadius: 0 }}>
+        <Box
+          sx={{
+            fontSize: "1rem",
+            lineHeight: 1,
+            borderRadius: 3,
+            color: "white",
+            boxShadow: "0 0 0 32px white",
+          }}
+          p={1}
+          pb={0.75}
+        >
+          <MenuIcon />
+        </Box>
       </Button>
-      <Drawer anchor="top" open={state.drawerOpen} onClose={hideDrawer}>
+      <Drawer anchor="right" open={state.drawerOpen} onClose={hideDrawer}>
+        <Box display="flex" justifyContent="center" width="100%" pt={4} pb={0}>
+          <Typography variant="h4">Navigation</Typography>
+        </Box>
         <List>
           {React.Children.map(props.children, (child, index) => (
-            <ListItem key={index}>
-              {child}
-            </ListItem>
+            <ListItem key={index}>{child}</ListItem>
           ))}
         </List>
       </Drawer>
     </React.Fragment>
   ) : (
     <Box display="flex" flexWrap="nowrap" justifyContent="flex-end">
-      {React.Children.map(props.children, (child, index) => (
-            <Box px={1} key={index}>
-              {child}
-            </Box>
-      ))}
+      {React.Children.map(props.children, (child, index) => {
+
+      const navigationItem = child as ReturnType<typeof NavigationItem>;
+      const childSelected = navigationItem.props.selected === true;
+      const childNode = childSelected ? React.cloneElement(navigationItem, {...navigationItem.props, textColor: "white"}) : navigationItem;
+        return (
+          <Box
+            key={index}
+            sx={{
+              backgroundColor: childSelected ? "transparent" : "white",
+            }}
+          >
+            {childNode}
+          </Box>
+        );
+      })}
     </Box>
   );
 }
