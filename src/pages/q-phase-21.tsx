@@ -1,47 +1,26 @@
 import React, { ReactElement } from "react";
-import Container from "@mui/material/Container";
 import Text from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Header from "@/components/Header";
-import Link from "@/components/Link";
 import { Button, Grid } from "@mui/material";
+import Link from "@/ui/Link";
+import QHeading from "@/ui/QHeading";
+import Header from "@/sections/Header";
+import Body from "@/sections/Body";
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
 
-export default function Index(): ReactElement {
+export default function QPhase21(): ReactElement {
   return (
-    <Box
-      sx={{
-        /*backgroundImage:
-          "linear-gradient(320deg, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)",*/
-        background: `linear-gradient(135deg, #e1e1e1 25%, transparent 25%) -50px 0,
-          linear-gradient(225deg, #e1e1e1 25%, transparent 25%) -50px 0,
-          linear-gradient(315deg, #e1e1e1 25%, transparent 25%),
-          linear-gradient(45deg, #e1e1e1 25%, transparent 25%)`,
-        backgroundSize: "100px 100px",
-        backgroundColor: "#cfd8dc",
-      }}
-    >
-      <Container
-        maxWidth="lg"
-        sx={{
-          minHeight: "100vh",
-          bgcolor: "white",
-          px: 3,
-          boxShadow: 4,
-          pb: 3,
-        }}
-      >
-        <Header />
-        <Text variant="h3" component="h1">
-          Q-Phase
-        </Text>
-        <Text variant="h5" component="div">
+    <React.Fragment>
+      <Header />
+      <Body>
+        <QHeading variant="h1">Q-Phase</QHeading>
+        <Text variant="h3" component="div">
           Queere Orientierungsphase in Karlsruhe
         </Text>
-        <Text variant="h5" component="div">
+        <Text variant="h3" component="div">
           26. bis 28. November 2021
         </Text>
         <Box
@@ -61,11 +40,11 @@ export default function Index(): ReactElement {
               justifyContent: "center",
               alignItems: "baseline",
               flexWrap: "wrap",
-              color: "secondary.main"
+              color: "secondary.main",
             }}
           >
             <Text
-              variant="h3"
+              variant="h1"
               component="div"
               gutterBottom={false}
               sx={{ fontWeight: "bold", whiteSpace: "nowrap", mx: 1 }}
@@ -74,7 +53,6 @@ export default function Index(): ReactElement {
             </Text>
 
             <Text
-              variant="h2"
               color="primary"
               component="div"
               gutterBottom={false}
@@ -83,6 +61,12 @@ export default function Index(): ReactElement {
                 p: 1,
                 whiteSpace: "nowrap",
                 mx: 1,
+                fontSize: {
+                  xs: "3rem",
+                  sm: "3.4rem",
+                  md: "3.8rem",
+                  lg: "4.2rem",
+                },
               }}
             >
               let&apos;s be queer!
@@ -160,7 +144,7 @@ export default function Index(): ReactElement {
           </Grid>
           <Spacer />
         </Grid>
-      </Container>
-    </Box>
+      </Body>
+    </React.Fragment>
   );
 }

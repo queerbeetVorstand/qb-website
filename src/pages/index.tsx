@@ -1,15 +1,15 @@
 import React, { ReactElement } from "react";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Text from "@mui/material/Typography";
-import Link from "@/components/Link";
-import Header from "@/components/Header";
+import Link from "@/ui/Link";
+import Header from "@/sections/Header";
+import Body from "@/sections/Body";
 
 export default function Index(): ReactElement {
   return (
-    <Box>
+    <React.Fragment>
       <Header />
-      <Container maxWidth="md">
+      <Body>
         <Box my={4}>
           <Text variant="h5">
             🚧 Hier entsteht gerade noch die Website der Queerbeet
@@ -35,7 +35,7 @@ export default function Index(): ReactElement {
             beitreten.
           </Text>
         </Box>
-      </Container>
-    </Box>
+      </Body>
+    </React.Fragment>
   );
 }

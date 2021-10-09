@@ -9,7 +9,7 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/theme";
 import { Box } from "@mui/material";
-import Footer from "@/components/Footer";
+import Footer from "@/sections/Footer";
 
 declare module "@mui/styles/defaultTheme" {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -49,7 +49,17 @@ export default function MyApp(props: AppProps): ReactElement {
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <Box display="flex" flexDirection="column">
-            <Box minHeight="100vh">
+            <Box
+              minHeight="100vh"
+              sx={{
+                background: `linear-gradient(135deg, #e1e1e1 25%, transparent 25%) -50px 0,
+                              linear-gradient(225deg, #e1e1e1 25%, transparent 25%) -50px 0,
+                              linear-gradient(315deg, #e1e1e1 25%, transparent 25%),
+                              linear-gradient(45deg, #e1e1e1 25%, transparent 25%)`,
+                backgroundSize: "100px 100px",
+                backgroundColor: "#cfd8dc",
+              }}
+            >
               <Component {...pageProps} />
             </Box>
             <Footer />
