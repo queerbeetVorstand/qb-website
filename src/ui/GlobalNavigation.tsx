@@ -31,7 +31,15 @@ export default function GlobalNavigation(
 
   return isMobile ? (
     <React.Fragment>
-      <Button onClick={openDrawer} sx={{ overflow: "hidden", borderRadius: 0 }}>
+      <Button
+        onClick={openDrawer}
+        sx={{
+          overflow: "hidden",
+          borderRadius: 0,
+          border: "none",
+          "&:hover": { border: "none" },
+        }}
+      >
         <Box
           sx={{
             fontSize: "1rem",
@@ -60,10 +68,14 @@ export default function GlobalNavigation(
   ) : (
     <Box display="flex" flexWrap="nowrap" justifyContent="flex-end">
       {React.Children.map(props.children, (child, index) => {
-
-      const navigationItem = child as ReturnType<typeof NavigationItem>;
-      const childSelected = navigationItem.props.selected === true;
-      const childNode = childSelected ? React.cloneElement(navigationItem, {...navigationItem.props, textColor: "white"}) : navigationItem;
+        const navigationItem = child as ReturnType<typeof NavigationItem>;
+        const childSelected = navigationItem.props.selected === true;
+        const childNode = childSelected
+          ? React.cloneElement(navigationItem, {
+              ...navigationItem.props,
+              textColor: "white",
+            })
+          : navigationItem;
         return (
           <Box
             key={index}

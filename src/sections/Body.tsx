@@ -9,7 +9,8 @@ const BodyContainer: FunctionComponent = ({ children }) => (
       bgcolor: "white",
       px: 3,
       boxShadow: 4,
-      pb: 3,
+      pb: 5,
+      pt: 8
     }}
   >
     {children}
