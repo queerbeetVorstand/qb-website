@@ -6,6 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
 import { Typography, useMediaQuery } from "@mui/material";
 import { Menu as MenuIcon } from "react-feather";
+import NavigationItem from "@/components/NavigationItem";
 
 interface GlobalNavigationProperties {
   children: React.ReactNode;
@@ -59,9 +60,10 @@ export default function GlobalNavigation(
   ) : (
     <Box display="flex" flexWrap="nowrap" justifyContent="flex-end">
       {React.Children.map(props.children, (child, index) => {
-        // TODO safe cast to NavigationItem
-        let childSelected = child.props.selected === true;
-        let childNode = childSelected ? React.cloneElement(child, {...child.props, textColor: "white"}) : child;
+
+      const navigationItem = child as ReturnType<typeof NavigationItem>;
+      const childSelected = navigationItem.props.selected === true;
+      const childNode = childSelected ? React.cloneElement(navigationItem, {...navigationItem.props, textColor: "white"}) : navigationItem;
         return (
           <Box
             key={index}
