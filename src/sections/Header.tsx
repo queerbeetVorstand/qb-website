@@ -50,7 +50,9 @@ export default function Header(): ReactElement {
                 <NavigationItem
                   key={index}
                   destinationUrl={entry.destinationUrl}
-                  selected={selected}
+                  fontColor={selected ? "white" : undefined}
+                  mobileFontColor="primary.main"
+                  backgroundColor={selected ? "transparent" : "white"}
                 >
                   {entry.label}
                 </NavigationItem>
