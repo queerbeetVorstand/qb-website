@@ -52,12 +52,7 @@ export default function MyApp(props: AppProps): ReactElement {
             <Box
               minHeight="100vh"
               sx={{
-                background: `linear-gradient(135deg, #e1e1e1 25%, transparent 25%) -50px 0,
-                              linear-gradient(225deg, #e1e1e1 25%, transparent 25%) -50px 0,
-                              linear-gradient(315deg, #e1e1e1 25%, transparent 25%),
-                              linear-gradient(45deg, #e1e1e1 25%, transparent 25%)`,
-                backgroundSize: "100px 100px",
-                backgroundColor: "#cfd8dc",
+                background: `linear-gradient(180deg,#fef9f9,#fff)`,
               }}
             >
               <Component {...pageProps} />

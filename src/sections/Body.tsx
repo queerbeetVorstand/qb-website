@@ -6,11 +6,9 @@ const BodyContainer: FunctionComponent = ({ children }) => (
     maxWidth="lg"
     sx={{
       minHeight: "100vh",
-      bgcolor: "white",
       px: 3,
-      boxShadow: 4,
       pb: 5,
-      pt: 8
+      pt: 10
     }}
   >
     {children}
