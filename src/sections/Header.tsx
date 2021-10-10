@@ -40,7 +40,10 @@ export default function Header(): ReactElement {
           </Link>
         </Box>
         <Box display="flex" alignItems="stretch">
-          <GlobalNavigation>
+          <GlobalNavigation
+            mobileBackgroundColorOuter="white"
+            mobileBackgroundColorInner="transparent"
+          >
             {navigationEntries.map((entry: NavigationEntry, index) => {
               const selected = router.asPath === entry.destinationUrl;
               return (

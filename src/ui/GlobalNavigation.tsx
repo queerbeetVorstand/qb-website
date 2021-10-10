@@ -9,6 +9,9 @@ import NavigationItem from "@/ui/NavigationItem";
 
 interface GlobalNavigationProperties {
   children: React.ReactNode;
+  mobileBackgroundColorInner?: string;
+  mobileBackgroundColorOuter?: string;
+  mobileMenuIconColor?: string;
 }
 
 export default function GlobalNavigation(
@@ -25,6 +28,12 @@ export default function GlobalNavigation(
   const openDrawer = () => {
     setState({ ...state, drawerOpen: true });
   };
+
+  const {
+    mobileBackgroundColorOuter = "transparent",
+    mobileBackgroundColorInner = "primary.main",
+    mobileMenuIconColor: menuIconColor = mobileBackgroundColorOuter,
+  } = props;
 
   return (
     <React.Fragment>
@@ -43,8 +52,9 @@ export default function GlobalNavigation(
               fontSize: "1rem",
               lineHeight: 1,
               borderRadius: 3,
-              color: "white",
-              boxShadow: "0 0 0 32px white",
+              color: menuIconColor,
+              boxShadow: `0 0 0 32px ${mobileBackgroundColorOuter}`,
+              backgroundColor: mobileBackgroundColorInner,
             }}
             p={1}
             pb={0.75}
