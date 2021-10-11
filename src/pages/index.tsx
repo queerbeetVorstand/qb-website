@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import Text from "@mui/material/Typography";
+import Image from 'next/image';
 import Link from "@/ui/Link";
 import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
@@ -17,12 +18,12 @@ export default function Index(): ReactElement {
       <Header />
       <Body>
         <Box mt={{ xs: 3, md: 6 }}>
-          <img
+        <Image
             width="100%"
             src={
               desktop ? "/images/group_pic.jpg" : "/images/group_pic_mobile.jpg"
             }
-          ></img>
+          />
         </Box>
         <QHeading variant="h1">Hey!</QHeading>
         <Text variant="body1" mt={3}>
