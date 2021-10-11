@@ -19,7 +19,6 @@ export default function Index(): ReactElement {
       <Body>
         <Box mt={{ xs: 3, md: 6 }}>
         <Image
-            width="100%"
             src={
               desktop ? "/images/group_pic.jpg" : "/images/group_pic_mobile.jpg"
             }
