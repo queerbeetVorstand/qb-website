@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import QBLogo from "@/ui/QBLogo";
 import Link from "@/ui/Link";
 import GlobalNavigation from "@/ui/GlobalNavigation";
-import NavigationItem from "@/ui/NavigationItem";
 import { useRouter } from "next/router";
+import { Typography } from "@mui/material";
 
 export default function Header(): ReactElement {
   const navigationEntries: NavigationEntry[] = [
@@ -40,17 +40,36 @@ export default function Header(): ReactElement {
           </Link>
         </Box>
         <Box display="flex" alignItems="stretch">
-          <GlobalNavigation>
+          <GlobalNavigation
+            mobileBackgroundColorOuter="white"
+            mobileBackgroundColorInner="transparent"
+          >
             {navigationEntries.map((entry: NavigationEntry, index) => {
               const selected = router.asPath === entry.destinationUrl;
               return (
-                <NavigationItem
+                <Link
                   key={index}
-                  destinationUrl={entry.destinationUrl}
-                  selected={selected}
+                  href={entry.destinationUrl}
+                  px={4}
+                  alignItems="center"
+                  underline="none"
+                  sx={{
+                    display: "flex",
+                    height: "100%",
+                    color: {
+                      xs: "primary.main",
+                      sm: selected ? "white" : undefined,
+                    },
+                    backgroundColor: selected ? "transparent" : "white",
+                  }}
                 >
-                  {entry.label}
-                </NavigationItem>
+                  <Typography
+                    variant="button"
+                    sx={{ fontSize: "1rem", color: "inherit" }}
+                  >
+                    {entry.label}
+                  </Typography>
+                </Link>
               );
             })}
           </GlobalNavigation>
