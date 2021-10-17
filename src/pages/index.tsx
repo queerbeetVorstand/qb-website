@@ -4,14 +4,27 @@ import Link from "@/ui/Link";
 import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Box } from "@mui/material";
 
 export default function Index(): ReactElement {
+  const theme = useTheme();
+  const desktop = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <React.Fragment>
       <Header />
       <Body>
-        <QHeading variant="h1">Schön, dass du da bist!</QHeading>
+        <Box mt={{ xs: 3, md: 6 }}>
+          <img
+            width="100%"
+            src={
+              desktop ? "/images/group_pic.jpg" : "/images/group_pic_mobile.jpg"
+            }
+          ></img>
+        </Box>
+        <QHeading variant="h1">Hey!</QHeading>
         <Text variant="body1" mt={3}>
           <p>
             Wir sind Studierende der Hochschulen in Karlsruhe, die mit anderen
