@@ -7,15 +7,34 @@ import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
 import Countdown, { CountdownTimeDelta } from "react-countdown";
+import Confetti from "react-confetti";
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
 
-const countdownRenderer = ({ days, hours, minutes, seconds, completed }: CountdownTimeDelta) => {
+const countdownRenderer = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+}: CountdownTimeDelta) => {
   if (completed) {
     // Render a completed state
-    return "";
+    return (
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+        }}
+      >
+        <Confetti recycle={false} numberOfPieces={400} />
+      </Box>
+    );
   } else {
     // Render a countdown
     const remaining = {
