@@ -7,11 +7,22 @@ import Body from "@/sections/Body";
 
 export default function Index(): ReactElement {
 
+  const greetings : string[] = [
+    "Schön, dass du da bist!",
+    "Willkommen!",
+    "Schön dich zu sehen!",
+    "Willkommen bei uns!",
+    "👋",
+    "Huhu!",
+  ];
+  const randomIndex = Math.floor(Math.random() * greetings.length);
+  const usedGreeting : string = greetings[randomIndex];
+
   return (
     <React.Fragment>
       <Header />
       <Body>
-        <QHeading variant="h1">Schön, dass du da bist!</QHeading>
+        <QHeading variant="h1">{usedGreeting}</QHeading>
         <Text variant="body1" mt={3}>
           <p>
             Wir sind Studierende der Hochschulen in Karlsruhe, die mit anderen
