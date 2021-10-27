@@ -6,10 +6,61 @@ import Link from "@/ui/Link";
 import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
+import Countdown, { CountdownTimeDelta } from "react-countdown";
+import Confetti from "react-confetti";
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
+
+const countdownRenderer = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+}: CountdownTimeDelta) => {
+  if (completed) {
+    // Render a completed state
+    return (
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+        }}
+      >
+        <Confetti recycle={false} numberOfPieces={400} />
+      </Box>
+    );
+  } else {
+    // Render a countdown
+    const remaining = {
+      Tage: days,
+      Stunden: hours,
+      Minuten: minutes,
+      Sekunden: seconds,
+    };
+    return (
+      <Box display="flex" justifyContent="space-evenly" alignItems="baseline">
+        {Object.entries(remaining).map(([label, value]) => {
+          return (
+            <Box key={label} p={2}>
+              <Text variant="h2" sx={{ width: "100%", textAlign: "center" }}>
+                {value}
+              </Text>
+              <Text variant="caption" sx={{ color: "primary.main" }}>
+                {label}
+              </Text>
+            </Box>
+          );
+        })}
+      </Box>
+    );
+  }
+};
 
 export default function QPhase21(): ReactElement {
   return (
@@ -37,40 +88,56 @@ export default function QPhase21(): ReactElement {
               borderTop: "2px solid",
               borderBottom: "2px solid",
               display: "flex",
-              justifyContent: "center",
-              alignItems: "baseline",
-              flexWrap: "wrap",
+              flexDirection: "column",
               color: "secondary.main",
             }}
           >
-            <Text
-              variant="h1"
-              component="div"
-              gutterBottom={false}
-              sx={{ fontWeight: "bold", whiteSpace: "nowrap", mx: 1 }}
-            >
-              F*ck last year,
-            </Text>
-
-            <Text
-              color="primary"
-              component="div"
-              gutterBottom={false}
+            <Box
               sx={{
-                fontFamily: "Hello",
-                p: 1,
-                whiteSpace: "nowrap",
-                mx: 1,
-                fontSize: {
-                  xs: "3rem",
-                  sm: "3.4rem",
-                  md: "3.8rem",
-                  lg: "4.2rem",
-                },
+                justifyContent: "center",
+                alignItems: "baseline",
+                display: "flex",
+                flexWrap: "wrap",
+                flexDirection: "row",
               }}
             >
-              let&apos;s be queer!
-            </Text>
+              <Text
+                variant="h1"
+                component="div"
+                gutterBottom={false}
+                sx={{ fontWeight: "bold", whiteSpace: "nowrap", mx: 1 }}
+              >
+                F*ck last year,
+              </Text>
+
+              <Text
+                color="primary"
+                component="div"
+                gutterBottom={false}
+                sx={{
+                  fontFamily: "Hello",
+                  p: 1,
+                  whiteSpace: "nowrap",
+                  mx: 1,
+                  fontSize: {
+                    xs: "3rem",
+                    sm: "3.4rem",
+                    md: "3.8rem",
+                    lg: "4.2rem",
+                  },
+                }}
+              >
+                let&apos;s be queer!
+              </Text>
+            </Box>
+            <Box>
+              <Text>
+                <Countdown
+                  date="2021-11-26T19:30+02:00"
+                  renderer={countdownRenderer}
+                ></Countdown>
+              </Text>
+            </Box>
           </Box>
         </Box>
         <Text variant="body1" paragraph sx={{ mt: { xs: 3, sm: 5 } }}>
