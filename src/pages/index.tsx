@@ -20,7 +20,7 @@ export default function Index(): ReactElement {
           </p>
           <p>
             Möchtest du noch mehr erfahren? Oder hast du Lust, mal
-            vorbeizuschauen? Wir treffen uns aktuell jeden Donnerstag 17:30 im{" "}
+            vorbeizuschauen? Wir treffen uns aktuell jeden Mittwoch 17:30 im{" "}
             <Link href="https://goo.gl/maps/JCHnMXudYRPwoiGu7">Z10</Link>, mal
             einfach so zum Quatschen oder für besondere Events wie Spielabende,
             Filmabende, Basteln, etc... Die meisten dieser Veranstaltungen
