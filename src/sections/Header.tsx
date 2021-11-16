@@ -9,8 +9,9 @@ import { Typography } from "@mui/material";
 export default function Header(): ReactElement {
   const navigationEntries: NavigationEntry[] = [
     { destinationUrl: "/", label: "Startseite" },
-    { destinationUrl: "/q-phase-21", label: "Q-Phase" },
     { destinationUrl: "/contact", label: "Kontakt" },
+    { destinationUrl: "/q-phase-21", label: "Q-Phase" },
+    { destinationUrl: "/queerbeats", label: "queerbeats" },
   ];
 
   const router = useRouter();
@@ -22,6 +23,7 @@ export default function Header(): ReactElement {
         position: "fixed",
         top: 0,
         width: "100%",
+        zIndex: 1000
       }}
     >
       <Box
