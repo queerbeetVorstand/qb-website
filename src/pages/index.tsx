@@ -4,25 +4,14 @@ import Link from "@/ui/Link";
 import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
+import { GetServerSideProps } from 'next';
 
-export default function Index(): ReactElement {
-
-  const greetings : string[] = [
-    "Schön, dass du da bist!",
-    "Willkommen!",
-    "Schön dich zu sehen!",
-    "Willkommen bei uns!",
-    "👋",
-    "Huhu!",
-  ];
-  const randomIndex = Math.floor(Math.random() * greetings.length);
-  const usedGreeting : string = greetings[randomIndex];
-
+export default function Index({greeting}: IndexProps): ReactElement {
   return (
     <React.Fragment>
       <Header />
       <Body>
-        <QHeading variant="h1">{usedGreeting}</QHeading>
+        <QHeading variant="h1">{greeting}</QHeading>
         <Text variant="body1" mt={3}>
           <p>
             Wir sind Studierende der Hochschulen in Karlsruhe, die mit anderen
@@ -45,4 +34,21 @@ export default function Index(): ReactElement {
       </Body>
     </React.Fragment>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const greetings : string[] = [
+    "Schön, dass du da bist!",
+    "Willkommen!",
+    "Schön dich zu sehen!",
+    "Willkommen bei uns!",
+    "👋",
+    "Huhu!",
+  ];
+  const randomIndex = Math.floor(Math.random() * greetings.length);
+  return {props: {greeting: greetings[randomIndex]}};
+}
+
+export interface IndexProps {
+  greeting: string
 }
