@@ -62,6 +62,25 @@ export default function Queerbeats(): ReactElement {
           </Box>
           <BoxImg />
         </Text>
+        <Box>
+          <Text
+            variant="body1"
+            paragraph
+            sx={{
+              mt: { xs: 3, sm: 5 },
+              border: "1px dashed",
+              borderColor: "primary.main",
+              p: 2,
+              textAlign: 'justify',
+            }}
+          >
+            <b>Update 22. November:</b> Aufgrund der aktuellen Inzidenz wird die
+            queerbeats nun auf eine 2G+ Regelung setzen. Dies bedeutet, dass
+            beim Einlass neben dem 2G-Nachweis (vollständig geimpft oder
+            genesen) nun zusätzlich ein negativer Schnelltest (nicht älter als 24h)
+            oder negativer PCR-Test (nicht älter als 48h) vorzuzeigen ist.
+          </Text>
+        </Box>
         <Text variant="body1" paragraph sx={{ mt: { xs: 3, sm: 5 } }}>
           Die queere Party im AKK bietet bei familiärer Atmosphäre jede Menge
           Spaß und Freude. Nibs sorgt auf dem Dancefloor für gute Stimmung. Und
@@ -73,7 +92,7 @@ export default function Queerbeats(): ReactElement {
         </Text>
         <Text variant="body1" paragraph sx={{ mt: { xs: 3, sm: 4 } }}>
           Da Miss Rona nicht auf der Gästeliste steht und sich nicht
-          einschleichen darf, gilt eine 2G-Regelung und Maskenpflicht.
+          einschleichen darf, gilt eine <b>2G+ Regelung</b> und Maskenpflicht.
           Ausgenommen von der Maskenpflicht ist für den Konsum von Getränken der
           Bereich der Sitzbänke. Falls sich noch Änderungen aufgrund einer neuen
           Verordnung ergeben, werden diese hier angegeben. Wir freuen uns auf
