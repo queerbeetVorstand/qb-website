@@ -3,9 +3,10 @@
         "dbaeumer.vscode-eslint", 
         "wix.vscode-import-cost", 
         "yzhang.markdown-all-in-one", 
-        "esbenp.prettier-vscode", 
-        "gruntfuggly.todo-tree",  
+        "esbenp.prettier-vscode",  
         "eg2.vscode-npm-script", 
-        "christian-kohler.npm-intellisense"
+        "christian-kohler.npm-intellisense",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens"
     ]
 }
