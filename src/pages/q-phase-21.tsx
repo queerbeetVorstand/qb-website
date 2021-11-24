@@ -86,10 +86,14 @@ export default function QPhase21(): ReactElement {
               textAlign: "justify",
             }}
           >
-            <b>Corona-Info:</b> Aufgrund der aktuellen Inzidenz werden wir bei
-            der Q-Phase auf eine strikte 2G-Regelung setzen. Dies bedeutet, dass
-            für die Teilnahme an allen Events ein 2G-Nachweis (vollständig
-            geimpft oder genesen) vorzuzeigen ist. Das Hygienekonzept zur
+            <b>Corona-Update 24. November:</b> Aufgrund des aktuellen
+            Infektionsgeschehens werden wir nun bei der gesamten Q-Phase auf
+            eine <b>2G+ Regelung</b> setzen. Dies bedeutet, dass du einmalig
+            beim ersten Event deinen 2G-Status nachweisen und zusätzlich vor
+            jeder weiteren Veranstaltung einen negativen Schnelltest (nicht
+            älter als 24h) oder negativen PCR-Test (nicht älter als 48h)
+            vorzeigen musst. Außerdem solltest du auch immer ein Ausweisdokument
+            (Perso, Reisepass, etc.) mit dabei haben. Das Hygienekonzept zur
             Q-Phase kannst du dir{" "}
             <Link
               href="https://cloud.queerbeet.org/index.php/s/S7NLkGSF27dtYGd"
