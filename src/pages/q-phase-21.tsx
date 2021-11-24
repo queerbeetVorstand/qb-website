@@ -90,7 +90,7 @@ export default function QPhase21(): ReactElement {
             Infektionsgeschehens werden wir nun bei der gesamten Q-Phase auf
             eine <b>2G+ Regelung</b> setzen. Dies bedeutet, dass du einmalig
             beim ersten Event deinen 2G-Status nachweisen und zusätzlich vor
-            jeder weiteren Veranstaltung einen negativen Schnelltest (nicht
+            jeder einzelnen Veranstaltung einen negativen Schnelltest (nicht
             älter als 24h) oder negativen PCR-Test (nicht älter als 48h)
             vorzeigen musst. Außerdem solltest du auch immer ein Ausweisdokument
             (Perso, Reisepass, etc.) mit dabei haben. Das Hygienekonzept zur
