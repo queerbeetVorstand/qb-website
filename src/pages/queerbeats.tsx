@@ -94,9 +94,15 @@ export default function Queerbeats(): ReactElement {
           Da Miss Rona nicht auf der Gästeliste steht und sich nicht
           einschleichen darf, gilt eine <b>2G+ Regelung</b> und Maskenpflicht.
           Ausgenommen von der Maskenpflicht ist für den Konsum von Getränken der
-          Bereich der Sitzbänke. Falls sich noch Änderungen aufgrund einer neuen
-          Verordnung ergeben, werden diese hier angegeben. Wir freuen uns auf
-          euch alle 🏳️‍🌈
+          Bereich der Sitzbänke. Das Hygienekonzept für die Party kannst du dir{" "}
+          <Link
+            href="https://cloud.queerbeet.org/index.php/s/S7NLkGSF27dtYGd"
+            target="_blank"
+          >
+            hier
+          </Link>{" "}
+          anschauen. Falls sich noch Änderungen aufgrund einer neuen Verordnung
+          ergeben, werden diese hier angegeben. Wir freuen uns auf euch alle 🏳️‍🌈
         </Text>
         <Grid container spacing={2} my={4} pt={0}>
           <Spacer />

@@ -74,6 +74,36 @@ export default function QPhase21(): ReactElement {
         <Text variant="h3" component="div">
           26. bis 28. November 2021
         </Text>
+        <Box>
+          <Text
+            variant="body1"
+            paragraph
+            sx={{
+              mt: { xs: 3, sm: 5 },
+              border: "1px dashed",
+              borderColor: "primary.main",
+              p: 2,
+              textAlign: "justify",
+            }}
+          >
+            <b>Corona-Update 24. November:</b> Aufgrund des aktuellen
+            Infektionsgeschehens werden wir nun bei der gesamten Q-Phase auf
+            eine <b>2G+ Regelung</b> setzen. Dies bedeutet, dass du einmalig
+            beim ersten Event deinen 2G-Status nachweisen und zusätzlich vor
+            jeder einzelnen Veranstaltung einen negativen Schnelltest (nicht
+            älter als 24h) oder negativen PCR-Test (nicht älter als 48h)
+            vorzeigen musst. Außerdem solltest du auch immer ein Ausweisdokument
+            (Perso, Reisepass, etc.) mit dabei haben. Das Hygienekonzept zur
+            Q-Phase kannst du dir{" "}
+            <Link
+              href="https://cloud.queerbeet.org/index.php/s/S7NLkGSF27dtYGd"
+              target="_blank"
+            >
+              hier
+            </Link>{" "}
+            anschauen.
+          </Text>
+        </Box>
         <Box
           sx={{
             my: { xs: 3, sm: 5 },
@@ -153,9 +183,6 @@ export default function QPhase21(): ReactElement {
           Wenn du Lust hast mitzumachen, dann melde dich am besten gleich über
           den Button unten an. Wegen Corona kann es sein, dass wir nur begrenzte
           Plätze haben werden, weshalb eine frühzeitige Anmeldung wichtig ist.
-          <br />
-          Speichere dir auch diese Seite ab, da es hier in nächster Zeit weitere
-          Infos zum Programm und co. geben wird.
         </Text>
         <Grid container spacing={2} my={{ xs: 1, sm: 3 }} pt={0}>
           <Spacer />
