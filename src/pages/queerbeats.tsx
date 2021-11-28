@@ -74,8 +74,8 @@ export default function Queerbeats(): ReactElement {
             Leider ist es schon wieder rum. Weder die Maskenpflicht noch die
             kühlen Temperaturen konnten uns auf dem Dancefloor etwas anhaben.
             Falls ihr den Abend genauso gelungen fandet, sehen wir euch
-            vielleicht bald auch bei unseren Kaffeeklatsch wieder. Danke auch an
-            unsere ganzen Helfer und das{" "}
+            vielleicht bald auch bei unseren Kaffeeklatschen wieder. Danke auch
+            an unsere tollen Helfer*innen und das{" "}
             <Link href="https://www.akk.org/">AKK</Link>!
           </Text>
         </Box>

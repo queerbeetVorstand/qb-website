@@ -37,10 +37,10 @@ export default function QPhase21(): ReactElement {
           >
             <b>Und schon ist es wieder rum!</b>
             <br />
-            Wir hoffen, dass Ihr eine die Zeit genauso genossen habt wie wir.
+            Wir hoffen, dass Ihr die Zeit genauso genossen habt wie wir.
             Hoffentlich sehen wir uns bald bei unseren regelmäßigen
-            Kaffeeklatsch wieder 🥳. Danke auch an unsere fleißigen Helfer, die
-            das Wochenende ermöglicht haben, sowie die{" "}
+            Kaffeeklatschen wieder 🥳. Danke auch an unsere fleißigen
+            Helfer*innen, die das Wochenende ermöglicht haben, sowie die{" "}
             <Link href="https://queeramnestyka.amnesty-international.de">
               QueerAmnesty Karlsruhe
             </Link>{" "}
