@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start"
   },
   "engines": {
@@ -37,6 +37,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-react": "^7.26.1",
     "file-loader": "^6.2.0",
+    "next-sitemap": "^1.6.203",
     "prettier": "^2.4.1",
     "typescript": "^4.4.3",
     "webpack": "^5.56.0"
