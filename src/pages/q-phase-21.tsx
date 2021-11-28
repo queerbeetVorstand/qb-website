@@ -6,61 +6,10 @@ import Link from "@/ui/Link";
 import QHeading from "@/ui/QHeading";
 import Header from "@/sections/Header";
 import Body from "@/sections/Body";
-import Countdown, { CountdownTimeDelta } from "react-countdown";
-import Confetti from "react-confetti";
 
 const Spacer = () => (
   <Grid item xs={2} lg={3} display={{ xs: "none", md: "block" }}></Grid>
 );
-
-const countdownRenderer = ({
-  days,
-  hours,
-  minutes,
-  seconds,
-  completed,
-}: CountdownTimeDelta) => {
-  if (completed) {
-    // Render a completed state
-    return (
-      <Box
-        sx={{
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          top: 0,
-          left: 0,
-        }}
-      >
-        <Confetti recycle={false} numberOfPieces={400} />
-      </Box>
-    );
-  } else {
-    // Render a countdown
-    const remaining = {
-      Tage: days,
-      Stunden: hours,
-      Minuten: minutes,
-      Sekunden: seconds,
-    };
-    return (
-      <Box display="flex" justifyContent="space-evenly" alignItems="baseline">
-        {Object.entries(remaining).map(([label, value]) => {
-          return (
-            <Box key={label} p={2}>
-              <Text variant="h2" sx={{ width: "100%", textAlign: "center" }}>
-                {value}
-              </Text>
-              <Text variant="caption" sx={{ color: "primary.main" }}>
-                {label}
-              </Text>
-            </Box>
-          );
-        })}
-      </Box>
-    );
-  }
-};
 
 export default function QPhase21(): ReactElement {
   return (
@@ -86,22 +35,17 @@ export default function QPhase21(): ReactElement {
               textAlign: "justify",
             }}
           >
-            <b>Corona-Update 24. November:</b> Aufgrund des aktuellen
-            Infektionsgeschehens werden wir nun bei der gesamten Q-Phase auf
-            eine <b>2G+ Regelung</b> setzen. Dies bedeutet, dass du einmalig
-            beim ersten Event deinen 2G-Status nachweisen und zusätzlich vor
-            jeder einzelnen Veranstaltung einen negativen Schnelltest (nicht
-            älter als 24h) oder negativen PCR-Test (nicht älter als 48h)
-            vorzeigen musst. Außerdem solltest du auch immer ein Ausweisdokument
-            (Perso, Reisepass, etc.) mit dabei haben. Das Hygienekonzept zur
-            Q-Phase kannst du dir{" "}
-            <Link
-              href="https://cloud.queerbeet.org/index.php/s/S7NLkGSF27dtYGd"
-              target="_blank"
-            >
-              hier
+            <b>Und schon ist es wieder rum!</b>
+            <br />
+            Wir hoffen, dass Ihr die Zeit genauso genossen habt wie wir.
+            Hoffentlich sehen wir uns bald bei unseren regelmäßigen
+            Kaffeeklatschen wieder 🥳. Danke auch an unsere fleißigen
+            Helfer*innen, die das Wochenende ermöglicht haben, sowie die{" "}
+            <Link href="https://queeramnestyka.amnesty-international.de">
+              QueerAmnesty Karlsruhe
             </Link>{" "}
-            anschauen.
+            und{" "}
+            <Link href="https://www.pridepictures.de">PridePictures e.V.</Link>.
           </Text>
         </Box>
         <Box
@@ -160,14 +104,6 @@ export default function QPhase21(): ReactElement {
                 let&apos;s be queer!
               </Text>
             </Box>
-            <Box>
-              <Text>
-                <Countdown
-                  date="2021-11-26T19:30+02:00"
-                  renderer={countdownRenderer}
-                ></Countdown>
-              </Text>
-            </Box>
           </Box>
         </Box>
         <Text variant="body1" paragraph sx={{ mt: { xs: 3, sm: 5 } }}>
@@ -185,32 +121,6 @@ export default function QPhase21(): ReactElement {
           Plätze haben werden, weshalb eine frühzeitige Anmeldung wichtig ist.
         </Text>
         <Grid container spacing={2} my={{ xs: 1, sm: 3 }} pt={0}>
-          <Spacer />
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="large"
-              sx={{ width: "100%" }}
-              href="https://rebrand.ly/q-phase-21-anmeldung"
-              target="_blank"
-            >
-              Zur Q-Phase anmelden
-            </Button>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="large"
-              sx={{ width: "100%" }}
-              href="/Q-Phase_Kennenlern-Treffen.ics"
-              target="_blank"
-            >
-              Im Kalender abspeichern
-            </Button>
-          </Grid>
-          <Spacer />
           <Spacer />
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Button
