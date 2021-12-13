@@ -16,3 +16,7 @@ yarn-error.log*
 
 # Next.js
 /.next
+
+# public
+public/sitemap.xml
+public/robots.txt
