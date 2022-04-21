@@ -99,7 +99,7 @@ export default function Contact(): ReactElement {
         {renderActions(memberActions)}
         <Typo variant="body1">
           Oder komm doch mal zu einem unserer Kaffeeklatsche dazu. Diese finden
-          i.d.R. immer Mittwochs von 17:30 bis 19:30 im{" "}
+          i.d.R. immer Mittwochs von 18:30 bis 20:30 im{" "}
           <Link href="https://goo.gl/maps/j65TS28gftuxx5pz8">Z10</Link> in
           Karlsruhe statt (Esszimmer im 1. OG).
         </Typo>
