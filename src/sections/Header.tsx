@@ -10,8 +10,6 @@ export default function Header(): ReactElement {
   const navigationEntries: NavigationEntry[] = [
     { destinationUrl: "/", label: "Startseite" },
     { destinationUrl: "/contact", label: "Kontakt" },
-    { destinationUrl: "/q-phase-21", label: "Q-Phase" },
-    { destinationUrl: "/queerbeats", label: "queerbeats" },
   ];
 
   const router = useRouter();
