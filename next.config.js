@@ -1,4 +1,9 @@
-module.exports = {
+const { withFaust } = require("@faustjs/next");
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+module.exports = withFaust({
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -20,4 +25,4 @@ module.exports = {
 
     return config;
   },
-};
+});

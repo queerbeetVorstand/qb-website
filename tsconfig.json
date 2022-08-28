@@ -4,8 +4,9 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "lib": [
-      "DOM",
-      "ESNext"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
     "module": "esnext",
     "moduleResolution": "node",
@@ -27,7 +28,8 @@
         "src/*"
       ]
     },
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
   "exclude": [
     "node_modules"
