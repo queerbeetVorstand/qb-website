@@ -5,10 +5,8 @@ import { getNextStaticProps, is404 } from "@faustjs/next";
 import { GetStaticPropsContext } from "next";
 import Head from "next/head";
 
-type PostPreviewNode = Post["preview"]["node"];
-
 export interface PostProps {
-  post: Post | PostPreviewNode | null | undefined;
+  post: Post | null | undefined;
 }
 
 export function PostComponent({ post }: PostProps) {

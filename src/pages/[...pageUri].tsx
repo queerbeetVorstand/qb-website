@@ -4,7 +4,7 @@ import { getNextStaticProps, is404 } from "@faustjs/next";
 import { GetStaticPropsContext } from "next";
 
 export interface PageProps {
-  page: PageType | PageType["preview"]["node"] | null | undefined;
+  page: PageType | null | undefined;
 }
 
 export function PageComponent({ page }: PageProps) {
