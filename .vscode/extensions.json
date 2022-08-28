@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "dbaeumer.vscode-eslint", 
-        "wix.vscode-import-cost", 
         "yzhang.markdown-all-in-one", 
         "esbenp.prettier-vscode",  
         "eg2.vscode-npm-script", 
