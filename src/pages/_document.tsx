@@ -1,7 +1,13 @@
-import React, { ReactElement } from "react";
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
-import ServerStyleSheets from '@mui/styles/ServerStyleSheets';
 import theme from "@/theme";
+import ServerStyleSheets from "@mui/styles/ServerStyleSheets";
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
+import React, { ReactElement } from "react";
 
 export default class MyDocument extends Document {
   render(): ReactElement {
@@ -25,7 +31,6 @@ export default class MyDocument extends Document {
 
   // `getInitialProps` belongs to `_document` (instead of `_app`),
   // it's compatible with server-side generation (SSG).
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   static async getInitialProps(ctx: DocumentContext) {
     // Resolution order
     //
